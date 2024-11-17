@@ -6,7 +6,7 @@
             <tr>
                 <th scope="col">#ID</th>
                 <th scope="col">Name</th>
-                <!-- <th scope="col">Image</th> -->
+                <th scope="col">Image</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Status</th>
@@ -17,19 +17,19 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($products as $pro) : ?>
+            <?php foreach ($products as $product) : ?>
                 <tr>
-                    <th scope="row"><?= $pro['id'] ?></th>
-                    <td><?= $pro['name'] ?></td>
-                    <!-- <td>
-                        <img src="<?= ROOT_URL . $pro['image'] ?>" width="60" alt="">
-                    </td> -->
-                    <td><?= $pro['price'] ?></td>
-                    <td><?= $pro['quantity'] ?></td>
-                    <td><?= $pro['status'] ? 'Đang kinh doanh' : 'Ngừng kinh doanh' ?></td>
-                    <td><?= $pro['cate_name'] ?></td>
+                    <th scope="row"><?= $product['id'] ?></th>
+                    <td><?= $product['name'] ?></td>
                     <td>
-                        <a href="<?= ADMIN_URL . '?ctl=editsp&id=' . $pro['id'] ?>" class="btn btn-primary">Cập nhật</a>
+                        <img src="<?= ROOT_URL . $product['image'] ?>" width="60" alt="">
+                    </td>
+                    <td><?= $product['price'] ?></td>
+                    <td><?= $product['quantity'] ?></td>
+                    <td><?= $product['status'] ? 'Đang kinh doanh' : 'Ngừng kinh doanh' ?></td>
+                    <td><?= $product['cate_name'] ?></td>
+                    <td>
+                        <a href="<?= ADMIN_URL . '?ctl=editsp&id=' . $product['id'] ?>" class="btn btn-primary">Cập nhật</a>
                     </td>
                 </tr>
             <?php endforeach ?>

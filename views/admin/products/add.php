@@ -16,6 +16,10 @@
                 <?php endforeach ?>
             </select>
         </div>
+        <!-- <div class="mb-3">
+            <label for="">Hình ảnh</label>
+            <input type="file" name="image" id="" class="form-control">
+        </div> -->
         <div class="mb-3">
             <label for="">Giá</label>
             <input type="number" name="price" id="" class="form-control">

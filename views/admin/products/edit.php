@@ -17,6 +17,11 @@
                 <?php endforeach ?>
             </select>
         </div>
+        <!-- <div class="mb-3">
+            <label for="">Hình ảnh</label><br>
+            <img src="<?= ROOT_URL . $product['image'] ?>" width="60" alt=""> <br>
+            <input type="file" name="image" id="" class="form-control">
+        </div> -->
         <div class="mb-3">
             <label for="">Giá</label>
             <input type="number" name="price" value="<?= $product['price'] ?>" class="form-control">
