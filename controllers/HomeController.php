@@ -16,4 +16,16 @@ class HomeController
             compact('products', 'list_products', 'categories')
         );
     }
+    public function register()
+    {
+        return view(
+            'client.register'
+        );
+    }
+    public function login()
+    {
+        return view(
+            'client.login'
+        );
+    }
 }

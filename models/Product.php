@@ -39,7 +39,7 @@ class Product extends BaseModel
 //Thêm dữ liệu
 public function create($data)
 {
-    $sql = "INSERT INTO products(name, price, quantity, description, category_id, status) VALUES(:name, :image, :price, :quantity, :description, :category_id, :status)";
+    $sql = "INSERT INTO products(name,image , price, quantity, description, category_id, status) VALUES(:name, :image, :price, :quantity, :description, :category_id, :status)";
 
     $stmt = $this->conn->prepare($sql);
     $stmt->execute($data);
@@ -47,7 +47,7 @@ public function create($data)
     //Cập nhật
     public function update($id, $data)
     {
-        $sql = "UPDATE products SET name=:name , price=:price, quantity=:quantity, description=:description, category_id=:category_id, status=:status WHERE id=:id";
+        $sql = "UPDATE products SET name=:name,image=:image , price=:price, quantity=:quantity, description=:description, category_id=:category_id, status=:status WHERE id=:id";
 
         $stmt = $this->conn->prepare($sql);
         //thêm id và mảng data

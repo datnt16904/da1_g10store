@@ -1,6 +1,5 @@
 <?php include_once ROOT_DIR . "views/client/header.php" ?>
 
-
 <?php include_once ROOT_DIR . "views/client/slider.php" ?>
 
 
@@ -11,7 +10,7 @@
             <!-- Box Sản Phẩm -->
             <div class="col-md-3">
                 <div class="product-box">
-                    <img src="<?= $product['image'] ?>" alt="Product Image" class="product-img">
+                    <img src="<?= $product['image'] ?>" alt="Product Image" class="product-img" width="150px">
                     <div class="product-info">
                         <a href="#">
                             <h5 class="product-name"><?= $product['name'] ?></h5>
@@ -33,18 +32,18 @@
 
     <h1 class="mt-3">Sản phẩm cho điện thoại</h1>
     <div class="row g-4">
-        <?php foreach ($list_products as $pro): ?>
+        <?php foreach ($list_products as $product): ?>
             <!-- Box Sản Phẩm -->
             <div class="col-md-3">
                 <div class="product-box">
-                    <img src="<?= $pro['image'] ?>" alt="Product Image" class="product-img">
+                    <img src="<?= $product['image'] ?>" alt="Product Image" class="product-img">
                     <div class="product-info">
                         <a href="#">
-                            <h5 class="product-name"><?= $pro['name'] ?></h5>
+                            <h5 class="product-name"><?= $product['name'] ?></h5>
                         </a>
                         <div>
                             <span class="product-price">
-                                <?= number_format($pro['price']) ?> vnđ
+                                <?= number_format($product['price']) ?> vnđ
                             </span>
                         </div>
                         <div class="product-buttons">

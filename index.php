@@ -15,5 +15,7 @@ $ctl = $_GET['ctl'] ?? '';
 match ($ctl) {
     '', 'home' => (new HomeController)->index(),
     'category' => (new ProductController)->list(),
+    'register' => (new HomeController)->register(),
+    'login' => (new HomeController)->login(),
     default => view("errors.404"),
 };

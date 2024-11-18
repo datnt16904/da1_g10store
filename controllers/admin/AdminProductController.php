@@ -57,6 +57,14 @@ class AdminProductController
             die("Sản phẩm không tồn tại với ID: " . $data['id']);
         }
 
+        $image = '';
+        $file = $_FILES['image'];
+        if ($file['size']>0) {
+            $image = "img/" . $file['name'];
+            move_uploaded_file($file['tmp_name'], ROOT_DIR . $image);
+        }
+        //them image vào data
+        $data['image'] = $image;
         $product->update($data['id'], $data);
 
         header("location: " . ADMIN_URL . "?ctl=editsp&id=" . $data['id']);
