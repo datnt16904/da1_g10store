@@ -80,7 +80,10 @@
                             <a class="nav-link active" aria-current="page" href="<?= ROOT_URL ?>">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= ROOT_URL . '?ctl=category&id=1' ?>">Sản phẩm</a>
+                            <a class="nav-link" href="<?= ROOT_URL . '?ctl=category&id=2' ?>">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giỏ hàng (<?= $totalQuantity ?>) </a>
                         </li>
 
                     </ul>
