@@ -10,9 +10,9 @@
             <!-- Box Sản Phẩm -->
             <div class="col-md-3">
                 <div class="product-box">
-                    <img src="<?= $product['image'] ?>" alt="Product Image" class="product-img">
+                    <img src="<?= $product['image'] ?>" alt="Product Image" class="product-img" width="180px">
                     <div class="product-info">
-                        <a href="#">
+                        <a href="<?= ROOT_URL . '?ctl=detail&id=' . $product['id'] ?>">
                             <h5 class="product-name"><?= $product['name'] ?></h5>
                         </a>
                         <div>

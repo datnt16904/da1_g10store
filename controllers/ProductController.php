@@ -20,5 +20,28 @@ class ProductController
             'client.products.category',
             compact('products', 'categories', 'title')
         );
+        
+    }
+    //Hiển thị chi tiết
+    public function show(){
+        //Lấy id của sp
+        $id = $_GET['id'];
+        //Lấy ra sp theo id
+        $product = (new Product)->find($id);
+        //Lấy title
+        $title = $product['name'] ?? '';
+        //lấy danh mục
+        $categories = (new Category)->all();
+
+        //Lưu URI vào session
+        $_SESSION['URI'] = $_SERVER['REQUEST_URI'];
+
+        $totalQuantity = (new CartController)->totalQuantityCart();
+
+
+        return view(
+            'client.products.detail',
+            compact('product','title','categories', 'totalQuantity')
+        );
     }
 }

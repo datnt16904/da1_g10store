@@ -63,8 +63,21 @@ public function find($id)
     $stmt->execute(['id' => $id]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+//Xóa sản phẩm
+public function delete($id)
+{
+    $sql = "DELETE FROM products WHERE id=:id";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute(['id' => $id]);
+}
 
-
+//Tìm kiếm sp theo tên
+public function search($keyword = null){
+    $sql = "SELECT * FROM products WHERE name LIKE '%$keyword%'";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 
 

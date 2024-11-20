@@ -60,4 +60,27 @@
         <div class="bottom">
             <h3>© Copyright 2024 Co., Ltd. All rights reserved.</h3>
         </div>
+        <script>
+    //lấy button
+    search =document.getElementById('search');
+    //Viết sự kiện click cho nút search
+    search.addEventListener('click', function(){
+        keyword =document.getElementById('keyword').value;
+        window.location = "<?= ROOT_URL  ?>" + "?ctl=search&keyword=" + keyword;
+
+    })
+
+    search.addEventListener('keydown', function(){
+    if (e.key == 'Enter'){
+
+    }
+})
+
+function searchProduct(){
+    window.location = "<?ROOT_URL ?>" + "?ctl=search&keyword=" + $keyword;
+    
+}
+
+
+</script>
     </footer>

@@ -12,7 +12,7 @@
                 <div class="product-box">
                     <img src="<?= $product['image'] ?>" alt="Product Image" class="product-img" width="150px">
                     <div class="product-info">
-                        <a href="#">
+                        <a href="<?= ROOT_URL . '?ctl=detail&id=' . $product['id'] ?>">
                             <h5 class="product-name"><?= $product['name'] ?></h5>
                         </a>
                         <div>
@@ -36,14 +36,14 @@
             <!-- Box Sản Phẩm -->
             <div class="col-md-3">
                 <div class="product-box">
-                    <img src="<?= $product['image'] ?>" alt="Product Image" class="product-img">
+                    <img src="<?= $list_product['image'] ?>" alt="Product Image" class="product-img">
                     <div class="product-info">
                         <a href="#">
-                            <h5 class="product-name"><?= $product['name'] ?></h5>
+                            <h5 class="product-name"><?= $list_product['name'] ?></h5>
                         </a>
                         <div>
                             <span class="product-price">
-                                <?= number_format($product['price']) ?> vnđ
+                                <?= number_format($list_product['price']) ?> vnđ
                             </span>
                         </div>
                         <div class="product-buttons">
