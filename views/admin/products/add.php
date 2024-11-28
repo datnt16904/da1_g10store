@@ -9,17 +9,18 @@
         <div class="mb-3">
             <label for="">Danh mục</label>
             <select name="category_id" id="" class="form-control">
-                <?php foreach ($categories as $cate): ?>
-                    <option value="<?= $cate['ID'] ?>">
+                 <?php foreach ($categories as $cate): ?>
+                    <option value="<?= $cate['ID'] ?>"
+                        >
                         <?= $cate['cate_name'] ?>
                     </option>
                 <?php endforeach ?>
             </select>
         </div>
-        <!-- <div class="mb-3">
+        <div class="mb-3">
             <label for="">Hình ảnh</label>
             <input type="file" name="image" id="" class="form-control">
-        </div> -->
+        </div>
         <div class="mb-3">
             <label for="">Giá</label>
             <input type="number" name="price" id="" class="form-control">

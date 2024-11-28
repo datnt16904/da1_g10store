@@ -18,5 +18,6 @@ match ($ctl) {
     'storesp' => (new AdminProductController)->store(),
     'editsp' => (new AdminProductController)->edit(),
     'updatesp' => (new AdminProductController)->update(),
+    'deletesp' => (new AdminProductController)->delete(),
     default => view('errors.404'),
 };

@@ -30,6 +30,8 @@
                     <td><?= $product['cate_name'] ?></td>
                     <td>
                         <a href="<?= ADMIN_URL . '?ctl=editsp&id=' . $product['id'] ?>" class="btn btn-primary">Cập nhật</a>
+                        <a href="<?= ADMIN_URL . '?ctl=deletesp&id=' . $product['id'] ?>" class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</a>
+
                     </td>
                 </tr>
             <?php endforeach ?>

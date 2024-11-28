@@ -94,6 +94,7 @@
                     <div class="buttons">
             <a href="<?= ROOT_URL . '?ctl=login' ?>">Đăng nhập</a>
             <a href="<?= ROOT_URL . '?ctl=register' ?>" class="a2">Đăng ký</a>
+            <a href="<?= ROOT_URL . '?ctl=logout' ?>">Logout</a>
         </div>
                 </div>
             </div>

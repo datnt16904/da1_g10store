@@ -26,7 +26,11 @@ class AdminProductController
         $data = $_POST;
 
         $product = new Product;
+        $data['image'] = '';
+        // dd($data);die;
         $product->create($data);
+
+        
         header("location: " . ADMIN_URL . "?ctl=listsp");
     }
 
@@ -68,6 +72,18 @@ class AdminProductController
         $product->update($data['id'], $data);
 
         header("location: " . ADMIN_URL . "?ctl=editsp&id=" . $data['id']);
+        die;
+    }
+    //Xóa sản phẩm
+    public function delete()
+    {
+        $id = $_GET['id'];
+        //Xóa sp
+        (new Product)->delete($id);
+        //Session lưu thông báo khi xóa thành công
+        $_SESSION['message'] = "Xóa dữ liệu thành công";
+        //về giao diện hiển thị danh sách sp
+        header("location: " . ADMIN_URL . "?ctl=listsp");
         die;
     }
 }

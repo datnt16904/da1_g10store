@@ -146,14 +146,9 @@
             </div>
             <h2>Đăng Nhập</h2>
             <form action="<?= ROOT_URL . '?ctl=login' ?>" method="post">
-            <div class="mb-3">
-                        <label for="loginName" class="form-label">Name</label>
-                        <input type="text" class="form-control" name="name" id="loginName" placeholder="Nhập email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="loginPassword" class="form-label">Mật khẩu</label>
-                        <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Nhập mật khẩu">
-                    </div>
+                <input type="text" name="user" placeholder="Nhập tên đăng nhập ở đây">
+                <input type="password" name="password" placeholder="Nhập mặt khẩu ở đây">
+                <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
             </form>
             <div class="check">
                 <input type="checkbox" name="check" id="" aria-label="check" style="width: 15px; height: 15px;">
